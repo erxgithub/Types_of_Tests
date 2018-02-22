@@ -30,7 +30,9 @@ class ReturnValueTests: XCTestCase {
   }
     
   func test_canadianized_GivenANormalWord_ShouldReturnThatWord() {
-    
+    let input = "normal"
+    let expectedOutput = "normal"
+    XCTAssertEqual(canadianizer.canadianize(string: input), expectedOutput)
   }
   
   func test_canadianized_GivenACanadianWord_ShouldReturnThatWordCanadianized() {

@@ -55,10 +55,12 @@ class MockTests: XCTestCase {
   }
   
   func test_getScore_ShouldReturnTheUserDefaultScore() {
-    
+    // asking data(forKey:) method for a value. Setup some data and then test to see if you can fetch it with dataForKey
+    XCTAssertEqual(mockUserDefaults.currentScore, -1);
   }
   
   func test_saveScore_GivenANumber_ShouldSaveThatNumberToUserDefaults() {
+    // was the save method successful
     gameStateManager.save(currentScore: 0)
     XCTAssertEqual(mockUserDefaults.currentScore, 0);
     

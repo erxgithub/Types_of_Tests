@@ -30,7 +30,9 @@ class ObjectStateTests: XCTestCase {
   }
   
   func test_addLife_GivenAPlayerWithNoLives_ShouldAdd1ToLives() {
-
+    player.lives = 0
+    player.addLife()
+    XCTAssertEqual(player.lives, 1)
   }
   
   func test_addLife_GivenAPlayerWithFullLives_ShouldntAddToLives() {
